@@ -13,9 +13,11 @@ I had to use Mockito to be able to unit test just the Jersey classes without eng
 Both testing and war packaging can be invoked from the single maven goal "install". 
 
 If you either issue the following command:
+
 	mvn install
 
 Or run the provided script:
+
 	testandpackage.sh 
 
 It will invoke the Java compilier, then go through the Junit classes and finally build the .war file at the target/sample.war location. 
@@ -23,6 +25,7 @@ It will invoke the Java compilier, then go through the Junit classes and finally
 If you deploy this file in your Tomcat installation's webapps folder it should wire up the two endpoints you provided:
 
 http://localhost:[port]/sample/user/add?[pass a username]
+
 http://localhost:[port]/sample/user/show
 
 I used jdk1.7.0 to build this, you should have it installed and set as your active JDK, you should also have maven installed and correctly configured. 
